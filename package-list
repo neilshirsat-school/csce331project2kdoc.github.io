@@ -1,0 +1,25 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:Cashier App
+sh.snt.cashier
+module:Launcher
+sh.snt.launcher
+module:Manager App
+sh.snt.manager
+module:Database Layer
+sh.snt.database
+sh.snt.database.auth
+sh.snt.database.query
+sh.snt.database.repository
+sh.snt.database.tables
+module:Business Logic
+sh.snt.logic.auth
+sh.snt.logic.db
+sh.snt.logic.model
+sh.snt.logic.repo
+sh.snt.logic.service
+module:UI Kit
+sh.snt.ui
+sh.snt.ui.controls
+sh.snt.ui.icons

@@ -1,0 +1,546 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>sh.snt.database.repository</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-database/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-database/main" data-filter=":lib-database/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Database Layer::sh.snt.database.repository////PointingToDeclaration//-457566013">
+  <div class="breadcrumbs"><a href="../index.html">Database Layer</a><span class="delimiter">/</span><span class="current">sh.snt.database.repository</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><p class="paragraph">Repository implementations consumed by the application shells.</p><ul><li><p class="paragraph"><code class="lang-kotlin">PosRepositories</code> — menu, order, inventory, employee, and customization   repositories backed by Exposed.</p></li><li><p class="paragraph"><code class="lang-kotlin">OperationalReportsRepository</code> — product usage, X report, and restock reports.</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1295398874%2FClasslikes%2F-457566013" anchor-label="AuthenticatedUserRecord" id="-1295398874%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-authenticated-user-record/index.html"><span>Authenticated</span><wbr><span>User</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1295398874%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-authenticated-user-record/index.html">AuthenticatedUserRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>email<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>roles<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>permissions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An authenticated user's identity and effective authorization.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-283651081%2FClasslikes%2F-457566013" anchor-label="CheckoutLine" id="-283651081%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-checkout-line/index.html"><span>Checkout</span><wbr><span><span>Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-283651081%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-checkout-line/index.html">CheckoutLine</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>menuItemId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unitPrice<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>options<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A line supplied by the cashier when a checkout is completed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-460643871%2FClasslikes%2F-457566013" anchor-label="CheckoutRepository" id="-460643871%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-checkout-repository/index.html"><span>Checkout</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-460643871%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-checkout-repository/index.html">CheckoutRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Persists a cashier checkout in one transaction. Payment is intentionally not part of an order; a rejected write rolls back the sale and all of its lines.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="114822080%2FClasslikes%2F-457566013" anchor-label="CompletedCheckout" id="114822080%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-completed-checkout/index.html"><span>Completed</span><wbr><span><span>Checkout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="114822080%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-completed-checkout/index.html">CompletedCheckout</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>saleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>paymentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>method<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Result of a completed checkout.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1721962638%2FClasslikes%2F-457566013" anchor-label="CurrentOrderRepository" id="-1721962638%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-current-order-repository/index.html"><span>Current</span><wbr><span>Order</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1721962638%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-current-order-repository/index.html">CurrentOrderRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Persistence for the recoverable in-progress register order.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1116347730%2FClasslikes%2F-457566013" anchor-label="EmployeeRecord" id="1116347730%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employee-record/index.html"><span>Employee</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1116347730%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-employee-record/index.html">EmployeeRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>givenName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>familyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>active<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>email<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>role<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Cashier"</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An employee roster entry, including shift-independent role information.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-704393351%2FClasslikes%2F-457566013" anchor-label="EmployeeRepository" id="-704393351%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employee-repository/index.html"><span>Employee</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-704393351%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-employee-repository/index.html">EmployeeRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">User/shift repository used by the employee shell and seed check.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1235608796%2FClasslikes%2F-457566013" anchor-label="InventoryRecord" id="-1235608796%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-record/index.html"><span>Inventory</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1235608796%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-inventory-record/index.html">InventoryRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onHand<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>notifyAt<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lowStock<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>category<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">One raw ingredient's stock level for the manager inventory screen.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1021537205%2FClasslikes%2F-457566013" anchor-label="InventoryRepository" id="-1021537205%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-repository/index.html"><span>Inventory</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1021537205%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inventory-repository/index.html">InventoryRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Typed inventory reads and shipment writes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1293469825%2FClasslikes%2F-457566013" anchor-label="MenuRecord" id="1293469825%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-record/index.html"><span>Menu</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293469825%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-menu-record/index.html">MenuRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>description<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>category<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>price<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>active<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imageUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imagePath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A menu item as presented to the cashier and manager screens.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1440434984%2FClasslikes%2F-457566013" anchor-label="MenuRepository" id="1440434984%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-repository/index.html"><span>Menu</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1440434984%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-menu-repository/index.html">MenuRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Exposed-backed menu reads and recipe writes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-293819300%2FClasslikes%2F-457566013" anchor-label="OpenOrderRecord" id="-293819300%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-order-record/index.html"><span>Open</span><wbr><span>Order</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-293819300%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-open-order-record/index.html">OpenOrderRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>saleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lines<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-checkout-line/index.html">CheckoutLine</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subtotal<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tax<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>total<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">The recoverable in-progress register order for a store and cashier.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="890029114%2FClasslikes%2F-457566013" anchor-label="OperationalReportsRepository" id="890029114%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-operational-reports-repository/index.html"><span>Operational</span><wbr><span>Reports</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="890029114%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-operational-reports-repository/index.html">OperationalReportsRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Read-only operational reports. Every range is inclusive at start and exclusive at end.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="193934650%2FClasslikes%2F-457566013" anchor-label="PaymentRecord" id="193934650%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-record/index.html"><span>Payment</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="193934650%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-payment-record/index.html">PaymentRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>saleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>method<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A payment applied to a sale.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-445992095%2FClasslikes%2F-457566013" anchor-label="PaymentRepository" id="-445992095%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-repository/index.html"><span>Payment</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-445992095%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-payment-repository/index.html">PaymentRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Typed payment reads and writes for completed sales.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1476881653%2FClasslikes%2F-457566013" anchor-label="PosRepositories" id="1476881653%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pos-repositories/index.html"><span>Pos</span><wbr><span><span>Repositories</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1476881653%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-pos-repositories/index.html">PosRepositories</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Convenience facade for callers that need more than one typed repository.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-153945589%2FClasslikes%2F-457566013" anchor-label="ProductUsageReport" id="-153945589%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-product-usage-report/index.html"><span>Product</span><wbr><span>Usage</span><wbr><span><span>Report</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-153945589%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-product-usage-report/index.html">ProductUsageReport</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>rows<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-product-usage-row/index.html">ProductUsageRow</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>totalAmount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Ingredient consumption aggregated over a reporting range.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1422215625%2FClasslikes%2F-457566013" anchor-label="ProductUsageRow" id="1422215625%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-product-usage-row/index.html"><span>Product</span><wbr><span>Usage</span><wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1422215625%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-product-usage-row/index.html">ProductUsageRow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>ingredient<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">One ingredient's recorded consumption. Values come from sale-item ingredient snapshots.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="607416289%2FClasslikes%2F-457566013" anchor-label="RecipeIngredientRecord" id="607416289%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-recipe-ingredient-record/index.html"><span>Recipe</span><wbr><span>Ingredient</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="607416289%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-recipe-ingredient-record/index.html">RecipeIngredientRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>rawItemId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onHand<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unitCost<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>BigDecimal.ZERO<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>allergens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">One menu recipe link joined to its current inventory balance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="775829078%2FClasslikes%2F-457566013" anchor-label="ReplenishmentOrderRecord" id="775829078%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-replenishment-order-record/index.html"><span>Replenishment</span><wbr><span>Order</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="775829078%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-replenishment-order-record/index.html">ReplenishmentOrderRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>orderId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantityOrdered<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pendingQuantity<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Result of an automatic replenishment request for one ingredient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="325030618%2FClasslikes%2F-457566013" anchor-label="RestockRow" id="325030618%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-restock-row/index.html"><span>Restock</span><wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="325030618%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-restock-row/index.html">RestockRow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>item<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onHand<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minimum<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>replenish<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An inventory item that needs replenishment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1123729561%2FClasslikes%2F-457566013" anchor-label="SaleRecord" id="1123729561%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-record/index.html"><span>Sale</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1123729561%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sale-record/index.html">SaleRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>total<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A sale row as shown in recent-sale listings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1469510174%2FClasslikes%2F-457566013" anchor-label="SalesReportItem" id="1469510174%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-report-item/index.html"><span>Sales</span><wbr><span>Report</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1469510174%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sales-report-item/index.html">SalesReportItem</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">One line of a sale as rendered in the manager report.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519101088%2FClasslikes%2F-457566013" anchor-label="SalesReportRecord" id="519101088%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-report-record/index.html"><span>Sales</span><wbr><span>Report</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519101088%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sales-report-record/index.html">SalesReportRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>occurredAt<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>total<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>channel<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>items<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-sales-report-item/index.html">SalesReportItem</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refund<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A sale with the item and refund rows needed by the manager report.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1598531941%2FClasslikes%2F-457566013" anchor-label="SalesRepository" id="-1598531941%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-repository/index.html"><span>Sales</span><wbr><span><span>Repository</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1598531941%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sales-repository/index.html">SalesRepository</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">database<span class="token operator">: </span><a href="../sh.snt.database/-pos-database/index.html">PosDatabase</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Typed sale reads and writes. Sale completion is guarded by PostgreSQL triggers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1956459750%2FClasslikes%2F-457566013" anchor-label="ShipmentRecord" id="1956459750%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shipment-record/index.html"><span>Shipment</span><wbr><span><span>Record</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1956459750%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-shipment-record/index.html">ShipmentRecord</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>publicId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>itemId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unitCost<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>receivedAt<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>itemName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A received inventory shipment, or the equivalent purchase-order row.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1198210309%2FClasslikes%2F-457566013" anchor-label="XReport" id="1198210309%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-x-report/index.html"><span><span>XReport</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1198210309%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-x-report/index.html">XReport</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>businessDate<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/time/LocalDate.html">LocalDate</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hours<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-x-report-hour/index.html">XReportHour</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>salesTotal<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refundTotal<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>netTotal<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>paymentMethods<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">End-of-day X report containing hourly and payment-method breakdowns.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1243731329%2FClasslikes%2F-457566013" anchor-label="XReportHour" id="1243731329%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-x-report-hour/index.html"><span>XReport</span><wbr><span><span>Hour</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1243731329%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-x-report-hour/index.html">XReportHour</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>hour<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sales<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refunds<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>voids<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>BigDecimal.ZERO<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>discards<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>BigDecimal.ZERO</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Activity totals for a single hour of an X report.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

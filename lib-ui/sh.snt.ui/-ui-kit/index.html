@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>UiKit</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-ui/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-ui/main" data-filter=":lib-ui/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="UI Kit::sh.snt.ui/UiKit///PointingToDeclaration//-2033258852">
+  <div class="breadcrumbs"><a href="../../index.html">UI Kit</a><span class="delimiter">/</span><a href="../index.html">sh.snt.ui</a><span class="delimiter">/</span><span class="current">UiKit</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Ui</span><wbr><span><span>Kit</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">UiKit</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/CSCE-331-Fall-2026-901-912/Project2-Group92/blob/main/lib-ui/src/main/kotlin/sh/snt/ui/UiKit.kt#L37">source</a>)</span></span></div><p class="paragraph">Shared factory and typography utilities used across the desktop UI.</p><p class="paragraph">Fonts are loaded once from bundled resources; view helpers return fresh JavaFX nodes styled with the shared CSS classes.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-979032916%2FClasslikes%2F-2033258852" anchor-label="FontFace" id="-979032916%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-font-face/index.html"><span>Font</span><wbr><span><span>Face</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-979032916%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-font-face/index.html">FontFace</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-font-face/index.html">UiKit.FontFace</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Haskoy's variable face contains a real named SemiBold instance.  It is deliberately kept separate from the static Bold face: JavaFX CSS can otherwise turn every <code class="lang-kotlin">bold</code> declaration into the same face on versions that do not resolve variable-font axes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1679972830%2FFunctions%2F-2033258852" anchor-label="addButton" id="-1679972830%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-button.html"><span>add</span><wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1679972830%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-button.html"><span class="token function">addButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onAction<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene.layout/StackPane///PointingToDeclaration/">StackPane</span></div><div class="brief "><p class="paragraph">Creates the circular add affordance with a plus glyph.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2059175614%2FFunctions%2F-2033258852" anchor-label="applyTypography" id="-2059175614%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="apply-typography.html"><span>apply</span><wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2059175614%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="apply-typography.html"><span class="token function">applyTypography</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">root<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Parent///PointingToDeclaration/">Parent</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Applies exact loaded Haskoy faces because JavaFX CSS can collapse variable font axes. Traversing all Labeled nodes also covers buttons and toggles, not just Label nodes matched by the <code class="lang-kotlin">.label</code> skin class.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-495364423%2FFunctions%2F-2033258852" anchor-label="imagePlaceholder" id="-495364423%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-placeholder.html"><span>image</span><wbr><span><span>Placeholder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-495364423%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="image-placeholder.html"><span class="token function">imagePlaceholder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">caption<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"IMAGE"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene.layout/StackPane///PointingToDeclaration/">StackPane</span></div><div class="brief "><p class="paragraph">Creates the decorative image placeholder used when no artwork is available.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896618074%2FFunctions%2F-2033258852" anchor-label="liveDot" id="1896618074%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="live-dot.html"><span>live</span><wbr><span><span>Dot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896618074%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="live-dot.html"><span class="token function">liveDot</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene.layout/Region///PointingToDeclaration/">Region</span></div><div class="brief "><p class="paragraph">Creates the small pulsing "live" status dot.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="548869781%2FFunctions%2F-2033258852" anchor-label="loadedFontFaces" id="548869781%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="loaded-font-faces.html"><span>loaded</span><wbr><span>Font</span><wbr><span><span>Faces</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="548869781%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="loaded-font-faces.html"><span class="token function">loadedFontFaces</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="-font-face/index.html">UiKit.FontFace</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Face-resolution evidence used by the native typography verification.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1639033386%2FFunctions%2F-2033258852" anchor-label="menuItemImage" id="-1639033386%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="menu-item-image.html"><span>menu</span><wbr><span>Item</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1639033386%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="menu-item-image.html"><span class="token function">menuItemImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">caption<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">imagePath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">imageUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene.layout/StackPane///PointingToDeclaration/">StackPane</span></div><div class="brief "><p class="paragraph">Shows a cached menu image first, with its source URL as a deployment fallback.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1676715763%2FFunctions%2F-2033258852" anchor-label="pressScale" id="-1676715763%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="press-scale.html"><span>press</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1676715763%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="press-scale.html"><span class="token function">pressScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">pressedScale<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.96</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Installs hover and press scale feedback on a node, once per node.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1716824631%2FFunctions%2F-2033258852" anchor-label="section" id="1716824631%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="section.html"><span><span>section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1716824631%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="section.html"><span class="token function">section</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">content<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene.layout/VBox///PointingToDeclaration/">VBox</span></div><div class="brief "><p class="paragraph">Creates a titled section container.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

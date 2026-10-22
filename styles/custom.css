@@ -1,0 +1,95 @@
+/*
+ * Share Tea POS documentation theme.
+ *
+ * Dokka's own stylesheet defines the layout; this file only overrides design
+ * tokens so generated pages match the desktop application's warm neutral theme.
+ */
+
+:root {
+    --default-gray: #f3efe7;
+    --default-white: #fffdf9;
+    --background-color: var(--default-white);
+    --default-font-color: #20302b;
+    --header-font-color: #20302b;
+    --color-dark: #20302b;
+    --hover-link-color: #2f6f5e;
+    --active-section-color: #2f6f5e;
+    --sidemenu-section-active-color: #2f6f5e;
+    --navigation-highlight-color: rgba(47, 111, 94, 0.09);
+    --border-color: rgba(32, 48, 43, 0.16);
+    --blockquote-background: rgba(47, 111, 94, 0.07);
+    --color-key-blue: #2f6f5e;
+    --default-font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.theme-dark {
+    --default-gray: #1b2421;
+    --background-color: #141b19;
+    --default-font-color: rgba(250, 246, 239, 0.94);
+    --header-font-color: #faf6ef;
+    --color-dark: #faf6ef;
+    --hover-link-color: #8fc7b5;
+    --active-section-color: #8fc7b5;
+    --sidemenu-section-active-color: #8fc7b5;
+    --border-color: rgba(250, 246, 239, 0.18);
+    --blockquote-background: rgba(250, 246, 239, 0.06);
+    --color-key-blue: #8fc7b5;
+}
+
+body {
+    font-feature-settings: "cv11", "ss01";
+}
+
+a {
+    text-underline-offset: 0.18em;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.012em;
+}
+
+blockquote {
+    border-left: 3px solid #d98b5f;
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+}
+
+.symbol.monospace,
+code,
+pre {
+    border-radius: 8px;
+}
+
+pre {
+    border: 1px solid var(--border-color);
+}
+
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Module landing cards */
+div.sourceset-dependent-content > div > div > h2 {
+    border-bottom: 2px solid rgba(217, 139, 95, 0.45);
+    padding-bottom: 0.3rem;
+}
+
+.sidebar-part .sidebar-title {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+}
+
+/* Source-link pill */
+a.source-link {
+    border-radius: 999px;
+    padding: 0 0.45rem;
+    background: rgba(47, 111, 94, 0.1);
+}
+
+a.source-link:hover {
+    background: rgba(47, 111, 94, 0.2);
+}

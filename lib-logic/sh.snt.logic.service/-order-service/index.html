@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OrderService</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-logic/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-logic/main" data-filter=":lib-logic/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Business Logic::sh.snt.logic.service/OrderService///PointingToDeclaration//-656585596">
+  <div class="breadcrumbs"><a href="../../index.html">Business Logic</a><span class="delimiter">/</span><a href="../index.html">sh.snt.logic.service</a><span class="delimiter">/</span><span class="current">OrderService</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Order</span><wbr><span><span>Service</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OrderService</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/CSCE-331-Fall-2026-901-912/Project2-Group92/blob/main/lib-logic/src/main/kotlin/sh/snt/logic/service/OrderService.kt#L23">source</a>)</span></span></div><p class="paragraph">Builds and modifies <a href="../../sh.snt.logic.model/-order/index.html">Order</a> values without mutating the original instances.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="533930374%2FConstructors%2F-656585596" anchor-label="OrderService" id="533930374%2FConstructors%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-order-service.html"><span>Order</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="533930374%2FConstructors%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1630649484%2FClasslikes%2F-656585596" anchor-label="Companion" id="-1630649484%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1630649484%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1438667595%2FFunctions%2F-656585596" anchor-label="addItem" id="1438667595%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-item.html"><span>add</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1438667595%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-item.html"><span class="token function">addItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">order<span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a><span class="token punctuation">, </span></span><span class="parameter ">item<span class="token operator">: </span><a href="../../sh.snt.logic.model/-menu-item/index.html">MenuItem</a><span class="token punctuation">, </span></span><span class="parameter ">quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">customizations<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()<span class="token punctuation">, </span></span><span class="parameter ">customizationPriceDeltaCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a></div><div class="brief "><p class="paragraph">Returns a copy of <a href="add-item.html">order</a> with a new line appended.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1084712806%2FFunctions%2F-656585596" anchor-label="discountCents" id="1084712806%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="discount-cents.html"><span>discount</span><wbr><span><span>Cents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1084712806%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="discount-cents.html"><span class="token function">discountCents</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subtotalCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Kept in the domain service so label, payment, receipt, and persistence share one rule.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-151305901%2FFunctions%2F-656585596" anchor-label="removeLine" id="-151305901%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-line.html"><span>remove</span><wbr><span><span>Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-151305901%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="remove-line.html"><span class="token function">removeLine</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">order<span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a><span class="token punctuation">, </span></span><span class="parameter ">lineIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a></div><div class="brief "><p class="paragraph">Removes the line at <a href="remove-line.html">lineIndex</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1863685274%2FFunctions%2F-656585596" anchor-label="totals" id="-1863685274%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="totals.html"><span><span>totals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1863685274%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="totals.html"><span class="token function">totals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">order<span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a><span class="token punctuation">, </span></span><span class="parameter ">taxRate<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>DEFAULT_TAX_RATE<span class="token punctuation">, </span></span><span class="parameter ">discountCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-order-totals/index.html">OrderTotals</a></div><div class="brief "><p class="paragraph">Computes subtotal, discount, tax, and total for <a href="totals.html">order</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1283650766%2FFunctions%2F-656585596" anchor-label="updateQuantity" id="1283650766%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-quantity.html"><span>update</span><wbr><span><span>Quantity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1283650766%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="update-quantity.html"><span class="token function">updateQuantity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">order<span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a><span class="token punctuation">, </span></span><span class="parameter ">lineIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a></div><div class="brief "><p class="paragraph">Changes the quantity of an existing line, coercing it to at least 1.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="339564110%2FFunctions%2F-656585596" anchor-label="void" id="339564110%2FFunctions%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="void.html"><span><span>void</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="339564110%2FFunctions%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="void.html"><span class="token function">void</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">order<span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../sh.snt.logic.model/-order/index.html">Order</a></div><div class="brief "><p class="paragraph">Removes every line from <a href="void.html">order</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

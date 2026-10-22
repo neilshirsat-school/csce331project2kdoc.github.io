@@ -1,0 +1,471 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>sh.snt.logic.service</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-logic/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-logic/main" data-filter=":lib-logic/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Business Logic::sh.snt.logic.service////PointingToDeclaration//-656585596">
+  <div class="breadcrumbs"><a href="../index.html">Business Logic</a><span class="delimiter">/</span><span class="current">sh.snt.logic.service</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><p class="paragraph">Pure business services. Each service is stateless unless documented otherwise, and none of them perform I/O.</p><ul><li><p class="paragraph"><code class="lang-kotlin">OrderService</code> — immutable cart editing and totals.</p></li><li><p class="paragraph"><code class="lang-kotlin">PaymentService</code> — tender parsing and payment validation.</p></li><li><p class="paragraph"><code class="lang-kotlin">InventoryService</code> — quantity/unit validation and low-stock status.</p></li><li><p class="paragraph"><code class="lang-kotlin">MenuCatalogService</code> / <code class="lang-kotlin">MenuCategories</code> — catalog lookup, category options,   and text filtering.</p></li><li><p class="paragraph"><code class="lang-kotlin">MenuRecipeService</code> — recipe availability and costing.</p></li><li><p class="paragraph"><code class="lang-kotlin">CustomizationService</code> — customization option lookup.</p></li><li><p class="paragraph"><code class="lang-kotlin">CartInventory</code> — derived ingredient requirements and shortages.</p></li><li><p class="paragraph"><code class="lang-kotlin">SalesAnalyticsService</code> — sales summaries and per-employee totals.</p></li></ul><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val totals = OrderService().totals(<br>    order = cart,<br>    taxRate = OrderService.DEFAULT_TAX_RATE,<br>    discountCode = "BOBA10",<br>)<br>check(totals.totalCents &gt;= totals.subtotalCents - totals.discountCents)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-2068486872%2FClasslikes%2F-656585596" anchor-label="CartIngredient" id="-2068486872%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cart-ingredient/index.html"><span>Cart</span><wbr><span><span>Ingredient</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2068486872%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cart-ingredient/index.html">CartIngredient</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onHand<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An ingredient and its current stock level.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1779399579%2FClasslikes%2F-656585596" anchor-label="CartIngredientShortage" id="-1779399579%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cart-ingredient-shortage/index.html"><span>Cart</span><wbr><span>Ingredient</span><wbr><span><span>Shortage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1779399579%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cart-ingredient-shortage/index.html">CartIngredientShortage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>ingredient<span class="token operator">: </span><a href="-cart-ingredient/index.html">CartIngredient</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>required<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An ingredient whose required quantity exceeds what is on hand.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1998562221%2FClasslikes%2F-656585596" anchor-label="CartInventory" id="1998562221%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cart-inventory/index.html"><span>Cart</span><wbr><span><span>Inventory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1998562221%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cart-inventory/index.html">CartInventory</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>ingredients<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="-cart-ingredient/index.html">CartIngredient</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recipes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-cart-recipe-ingredient/index.html">CartRecipeIngredient</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Immutable stock snapshot. Cart reservations are derived, never written to the database.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-125247814%2FClasslikes%2F-656585596" anchor-label="CartRecipeIngredient" id="-125247814%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cart-recipe-ingredient/index.html"><span>Cart</span><wbr><span>Recipe</span><wbr><span><span>Ingredient</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-125247814%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cart-recipe-ingredient/index.html">CartRecipeIngredient</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>ingredientId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>perServing<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">One ingredient required to produce a menu item.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-209014281%2FClasslikes%2F-656585596" anchor-label="CustomizationService" id="-209014281%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customization-service/index.html"><span>Customization</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209014281%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-customization-service/index.html">CustomizationService</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">repository<span class="token operator">: </span><a href="../sh.snt.logic.repo/-customization-repository/index.html">CustomizationRepository</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Provides customization options by delegating to a <a href="../sh.snt.logic.repo/-customization-repository/index.html">CustomizationRepository</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1654978042%2FClasslikes%2F-656585596" anchor-label="DailySales" id="-1654978042%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-daily-sales/index.html"><span>Daily</span><wbr><span><span>Sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654978042%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-daily-sales/index.html">DailySales</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>day<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/time/LocalDate.html">LocalDate</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Net sales for one calendar day.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1940301557%2FClasslikes%2F-656585596" anchor-label="EmployeeSales" id="-1940301557%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employee-sales/index.html"><span>Employee</span><wbr><span><span>Sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1940301557%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-employee-sales/index.html">EmployeeSales</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>userId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>orders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>netSales<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>averageOrder<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Cashier totals derived from the immutable user_id on each sale row.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1520878656%2FClasslikes%2F-656585596" anchor-label="EmployeeSaleSnapshot" id="1520878656%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employee-sale-snapshot/index.html"><span>Employee</span><wbr><span>Sale</span><wbr><span><span>Snapshot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1520878656%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-employee-sale-snapshot/index.html">EmployeeSaleSnapshot</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>userId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>total<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refund<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>BigDecimal.ZERO</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Minimal sale row used to attribute totals to a cashier.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1132884864%2FClasslikes%2F-656585596" anchor-label="InventoryService" id="1132884864%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-service/index.html"><span>Inventory</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1132884864%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-service/index.html">InventoryService</a></div><div class="brief "><p class="paragraph">Stateless inventory validation and status helpers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1262436251%2FClasslikes%2F-656585596" anchor-label="InventoryStatus" id="1262436251%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-status/index.html"><span>Inventory</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1262436251%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-inventory-status/index.html">InventoryStatus</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-inventory-status/index.html">InventoryStatus</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Inventory rules shared by manager screens and non-UI callers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1438141986%2FClasslikes%2F-656585596" anchor-label="MenuCatalogService" id="-1438141986%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-catalog-service/index.html"><span>Menu</span><wbr><span>Catalog</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1438141986%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-menu-catalog-service/index.html">MenuCatalogService</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">repository<span class="token operator">: </span><a href="../sh.snt.logic.repo/-menu-repository/index.html">MenuRepository</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Provides menu browsing operations backed by a <a href="../sh.snt.logic.repo/-menu-repository/index.html">MenuRepository</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1645637790%2FClasslikes%2F-656585596" anchor-label="MenuCategories" id="1645637790%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-categories/index.html"><span>Menu</span><wbr><span><span>Categories</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1645637790%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-categories/index.html">MenuCategories</a></div><div class="brief "><p class="paragraph">Shared category names for both views; the catalog is the source of available categories.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1918524127%2FClasslikes%2F-656585596" anchor-label="MenuRecipeService" id="-1918524127%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-recipe-service/index.html"><span>Menu</span><wbr><span>Recipe</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1918524127%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-recipe-service/index.html">MenuRecipeService</a></div><div class="brief "><p class="paragraph">Small, UI-independent rules for manager menu and recipe presentation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2008003214%2FClasslikes%2F-656585596" anchor-label="OrderService" id="-2008003214%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-order-service/index.html"><span>Order</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2008003214%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-order-service/index.html">OrderService</a></div><div class="brief "><p class="paragraph">Builds and modifies <a href="../sh.snt.logic.model/-order/index.html">Order</a> values without mutating the original instances.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1798070196%2FClasslikes%2F-656585596" anchor-label="OrderTotals" id="-1798070196%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-order-totals/index.html"><span>Order</span><wbr><span><span>Totals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1798070196%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-order-totals/index.html">OrderTotals</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>subtotalCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>discountCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>taxCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>totalCents<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Computed order amounts in cents.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="13947298%2FClasslikes%2F-656585596" anchor-label="PaymentMethod" id="13947298%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-method/index.html"><span>Payment</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="13947298%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-payment-method/index.html">PaymentMethod</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-payment-method/index.html">PaymentMethod</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">The payment choices presented by the cashier checkout route.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1896055254%2FClasslikes%2F-656585596" anchor-label="PaymentService" id="-1896055254%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-service/index.html"><span>Payment</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896055254%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-payment-service/index.html">PaymentService</a></div><div class="brief "><p class="paragraph">Pure checkout rules kept outside the JavaFX view so they can be tested independently.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-875890911%2FClasslikes%2F-656585596" anchor-label="RecipeStock" id="-875890911%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-recipe-stock/index.html"><span>Recipe</span><wbr><span><span>Stock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-875890911%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-recipe-stock/index.html">RecipeStock</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onHand<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">The quantity of an ingredient required by a recipe and the amount on hand.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="162902318%2FClasslikes%2F-656585596" anchor-label="SalesAnalyticsService" id="162902318%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-analytics-service/index.html"><span>Sales</span><wbr><span>Analytics</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="162902318%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sales-analytics-service/index.html">SalesAnalyticsService</a></div><div class="brief "><p class="paragraph">Pure calculations kept separate from JDBC so range/reporting behavior is easy to test.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1582603642%2FClasslikes%2F-656585596" anchor-label="SalesItemSnapshot" id="-1582603642%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-item-snapshot/index.html"><span>Sales</span><wbr><span>Item</span><wbr><span><span>Snapshot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1582603642%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sales-item-snapshot/index.html">SalesItemSnapshot</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Item-level detail within a sale.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2054453927%2FClasslikes%2F-656585596" anchor-label="SalesSnapshot" id="-2054453927%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-snapshot/index.html"><span>Sales</span><wbr><span><span>Snapshot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2054453927%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sales-snapshot/index.html">SalesSnapshot</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>day<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/time/LocalDate.html">LocalDate</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>total<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refund<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token operator"> = </span>BigDecimal.ZERO<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>items<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-sales-item-snapshot/index.html">SalesItemSnapshot</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A payment-backed sale snapshot used by reporting calculations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1528105121%2FClasslikes%2F-656585596" anchor-label="SalesSummary" id="-1528105121%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-summary/index.html"><span>Sales</span><wbr><span><span>Summary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1528105121%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sales-summary/index.html">SalesSummary</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>netSales<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>orders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>averageOrder<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refunds<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>trend<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-daily-sales/index.html">DailySales</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topSellers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-seller-sales/index.html">SellerSales</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>itemSales<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-seller-sales/index.html">SellerSales</a><span class="token operator">&gt;</span><span class="token operator"> = </span>topSellers</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Aggregate sales report for a date range.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1283824612%2FClasslikes%2F-656585596" anchor-label="SellerSales" id="-1283824612%2FClasslikes%2F-656585596" data-filterable-set=":lib-logic/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-logic/main" data-filterable-set=":lib-logic/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-seller-sales/index.html"><span>Seller</span><wbr><span><span>Sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283824612%2FClasslikes%2F-656585596"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-logic/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-seller-sales/index.html">SellerSales</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>amount<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/math/BigDecimal.html">BigDecimal</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quantity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Aggregated sales for an item or seller name.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

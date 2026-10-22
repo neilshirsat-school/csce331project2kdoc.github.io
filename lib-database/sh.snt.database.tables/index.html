@@ -1,0 +1,966 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>sh.snt.database.tables</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-database/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-database/main" data-filter=":lib-database/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Database Layer::sh.snt.database.tables////PointingToDeclaration//-457566013">
+  <div class="breadcrumbs"><a href="../index.html">Database Layer</a><span class="delimiter">/</span><span class="current">sh.snt.database.tables</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><p class="paragraph">Exposed table definitions grouped by domain:</p><div class="table--container"><table><thead><tr><th>File</th><th>Tables and views</th></tr></thead><tbody><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">CoreTables</code></td><td>Stores, users, roles, permissions, employees</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">CatalogTables</code></td><td>Menu items, categories, ingredients, recipes</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">SalesTables</code></td><td>Sales, sale items, payments, refunds, discounts</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">ProcurementTables</code></td><td>Suppliers, purchase orders, shipments</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">OperationsTables</code></td><td>Inventory history, cash history, audit events</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">ReportingViews</code></td><td>Denormalized views for reporting</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">PosTables</code></td><td>Compatibility aliases and shared column conventions</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@ae2882f lang-kotlin">PostgresSchemaSupport</code></td><td>Helpers for schema-qualified DDL</td></tr></tbody></table></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1145067832%2FClasslikes%2F-457566013" anchor-label="AllergenInfoTable" id="1145067832%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-allergen-info-table/index.html"><span>Allergen</span><wbr><span>Info</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1145067832%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-allergen-info-table/index.html">AllergenInfoTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Allergen definitions that can be linked to raw items.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1643321854%2FClasslikes%2F-457566013" anchor-label="CashDrawerMovementsTable" id="1643321854%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cash-drawer-movements-table/index.html"><span>Cash</span><wbr><span>Drawer</span><wbr><span>Movements</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1643321854%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-cash-drawer-movements-table/index.html">CashDrawerMovementsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Manual paid-in, paid-out, deposit, and withdrawal adjustments to drawer cash.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="178846249%2FClasslikes%2F-457566013" anchor-label="CashDrawerSessionsTable" id="178846249%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cash-drawer-sessions-table/index.html"><span>Cash</span><wbr><span>Drawer</span><wbr><span>Sessions</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="178846249%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-cash-drawer-sessions-table/index.html">CashDrawerSessionsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Opening and closing lifecycle records for a register's cash drawer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1900301648%2FClasslikes%2F-457566013" anchor-label="CashHistoryView" id="-1900301648%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cash-history-view/index.html"><span>Cash</span><wbr><span>History</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1900301648%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-cash-history-view/index.html">CashHistoryView</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Exposed query mapping for the cash_history view installed by supporting.sql.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1598268755%2FClasslikes%2F-457566013" anchor-label="CustomersTable" id="1598268755%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customers-table/index.html"><span>Customers</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1598268755%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-customers-table/index.html">CustomersTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Customer records, including anonymous walk-in customers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1176945552%2FClasslikes%2F-457566013" anchor-label="DiscountsTable" id="1176945552%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-discounts-table/index.html"><span>Discounts</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1176945552%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-discounts-table/index.html">DiscountsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Catalog of named discounts that can be applied to sales.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1967722009%2FClasslikes%2F-457566013" anchor-label="EmployeeShiftsTable" id="-1967722009%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employee-shifts-table/index.html"><span>Employee</span><wbr><span>Shifts</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1967722009%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-employee-shifts-table/index.html">EmployeeShiftsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Clock-in and clock-out records for employees.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1961352622%2FClasslikes%2F-457566013" anchor-label="ExpenseCategoriesTable" id="-1961352622%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-expense-categories-table/index.html"><span>Expense</span><wbr><span>Categories</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1961352622%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-expense-categories-table/index.html">ExpenseCategoriesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Categories used to classify operating expenses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="345593362%2FClasslikes%2F-457566013" anchor-label="InventoryAdjustmentsTable" id="345593362%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-adjustments-table/index.html"><span>Inventory</span><wbr><span>Adjustments</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="345593362%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-adjustments-table/index.html">InventoryAdjustmentsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Manual corrections to raw-item stock levels.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1550845425%2FClasslikes%2F-457566013" anchor-label="InventoryDiscardsTable" id="-1550845425%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-discards-table/index.html"><span>Inventory</span><wbr><span>Discards</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1550845425%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-discards-table/index.html">InventoryDiscardsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Records of spoiled, damaged, or otherwise discarded inventory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-787203153%2FClasslikes%2F-457566013" anchor-label="InventoryHistoryView" id="-787203153%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-history-view/index.html"><span>Inventory</span><wbr><span>History</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-787203153%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-history-view/index.html">InventoryHistoryView</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Exposed query mapping for the inventory_history view installed by supporting.sql.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-422152377%2FClasslikes%2F-457566013" anchor-label="InventoryOnHandView" id="-422152377%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-on-hand-view/index.html"><span>Inventory</span><wbr><span>On</span><wbr><span>Hand</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422152377%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-on-hand-view/index.html">InventoryOnHandView</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Exposed query mapping for the inventory_on_hand view installed by supporting.sql.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="444123316%2FClasslikes%2F-457566013" anchor-label="InventoryShipmentDetailsTable" id="444123316%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-shipment-details-table/index.html"><span>Inventory</span><wbr><span>Shipment</span><wbr><span>Details</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="444123316%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-shipment-details-table/index.html">InventoryShipmentDetailsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Per-item quantities and costs recorded on an inventory shipment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-512957819%2FClasslikes%2F-457566013" anchor-label="InventoryShipmentsTable" id="-512957819%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-shipments-table/index.html"><span>Inventory</span><wbr><span>Shipments</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-512957819%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-inventory-shipments-table/index.html">InventoryShipmentsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Inventory shipments received at a store, optionally tied to an order and supplier.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="255164737%2FClasslikes%2F-457566013" anchor-label="LowStockAlertsTable" id="255164737%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-low-stock-alerts-table/index.html"><span>Low</span><wbr><span>Stock</span><wbr><span>Alerts</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="255164737%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-low-stock-alerts-table/index.html">LowStockAlertsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Alerts raised when an item's stock falls below its reorder level.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-568552246%2FClasslikes%2F-457566013" anchor-label="LoyaltyAccountsTable" id="-568552246%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-loyalty-accounts-table/index.html"><span>Loyalty</span><wbr><span>Accounts</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-568552246%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-loyalty-accounts-table/index.html">LoyaltyAccountsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Loyalty point balances, one row per enrolled customer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1255604871%2FClasslikes%2F-457566013" anchor-label="LoyaltyTransactionsTable" id="-1255604871%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-loyalty-transactions-table/index.html"><span>Loyalty</span><wbr><span>Transactions</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1255604871%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-loyalty-transactions-table/index.html">LoyaltyTransactionsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">History of loyalty point changes for customers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-953190077%2FClasslikes%2F-457566013" anchor-label="MenuCategoriesTable" id="-953190077%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-categories-table/index.html"><span>Menu</span><wbr><span>Categories</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-953190077%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-categories-table/index.html">MenuCategoriesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Top-level groupings for menu items, ordered for display.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1778076157%2FClasslikes%2F-457566013" anchor-label="MenuConfigItemsTable" id="1778076157%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-config-items-table/index.html"><span>Menu</span><wbr><span>Config</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1778076157%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-config-items-table/index.html">MenuConfigItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Individual choices offered within a menu configuration group.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1789457808%2FClasslikes%2F-457566013" anchor-label="MenuConfigItemsToRawItemsTable" id="-1789457808%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-config-items-to-raw-items-table/index.html"><span>Menu</span><wbr><span>Config</span><wbr><span>Items</span><wbr><span>To</span><wbr><span>Raw</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1789457808%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-config-items-to-raw-items-table/index.html">MenuConfigItemsToRawItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Ingredient consumption for a specific menu configuration choice.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="650607760%2FClasslikes%2F-457566013" anchor-label="MenuConfigsTable" id="650607760%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-configs-table/index.html"><span>Menu</span><wbr><span>Configs</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="650607760%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-configs-table/index.html">MenuConfigsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Configurable option groups attached to menu items, such as sweetness or toppings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1383374593%2FClasslikes%2F-457566013" anchor-label="MenuConfigToMenuConfigItemsTable" id="1383374593%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-config-to-menu-config-items-table/index.html"><span>Menu</span><wbr><span>Config</span><wbr><span>To</span><wbr><span>Menu</span><wbr><span>Config</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1383374593%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-config-to-menu-config-items-table/index.html">MenuConfigToMenuConfigItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Association of choices with the configuration groups that offer them.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="74474301%2FClasslikes%2F-457566013" anchor-label="MenuItemConfigsTable" id="74474301%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-item-configs-table/index.html"><span>Menu</span><wbr><span>Item</span><wbr><span>Configs</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="74474301%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-item-configs-table/index.html">MenuItemConfigsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Association of configuration groups with the menu items that offer them.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="850873572%2FClasslikes%2F-457566013" anchor-label="MenuItemNutritionTable" id="850873572%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-item-nutrition-table/index.html"><span>Menu</span><wbr><span>Item</span><wbr><span>Nutrition</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="850873572%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-item-nutrition-table/index.html">MenuItemNutritionTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Nutrition facts for a menu item at a given serving size.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-186891873%2FClasslikes%2F-457566013" anchor-label="MenuItemsTable" id="-186891873%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-items-table/index.html"><span>Menu</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-186891873%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-items-table/index.html">MenuItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Sellable menu items with their pricing and optional category.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-379035758%2FClasslikes%2F-457566013" anchor-label="MenuItemsToRawItemsTable" id="-379035758%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-menu-items-to-raw-items-table/index.html"><span>Menu</span><wbr><span>Items</span><wbr><span>To</span><wbr><span>Raw</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-379035758%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-menu-items-to-raw-items-table/index.html">MenuItemsToRawItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Recipe links declaring how much of each raw item a menu item consumes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="601123642%2FClasslikes%2F-457566013" anchor-label="OperatingExpensesTable" id="601123642%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-operating-expenses-table/index.html"><span>Operating</span><wbr><span>Expenses</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="601123642%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-operating-expenses-table/index.html">OperatingExpensesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Non-inventory operating expenses recorded by a store.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="670257910%2FClasslikes%2F-457566013" anchor-label="PasswordsTable" id="670257910%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-passwords-table/index.html"><span>Passwords</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="670257910%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-passwords-table/index.html">PasswordsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Salted password hashes, one row per user.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2012180340%2FClasslikes%2F-457566013" anchor-label="PaymentMethodsTable" id="2012180340%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payment-methods-table/index.html"><span>Payment</span><wbr><span>Methods</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2012180340%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-payment-methods-table/index.html">PaymentMethodsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Payment methods accepted by the POS, such as card, cash, or discount.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="278237141%2FClasslikes%2F-457566013" anchor-label="PaymentsTable" id="278237141%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-payments-table/index.html"><span>Payments</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="278237141%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-payments-table/index.html">PaymentsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Payments applied to sales.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="133721730%2FClasslikes%2F-457566013" anchor-label="PermissionsTable" id="133721730%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-permissions-table/index.html"><span>Permissions</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="133721730%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-permissions-table/index.html">PermissionsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Named permissions that can be granted to roles.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1818321891%2FClasslikes%2F-457566013" anchor-label="PosTables" id="-1818321891%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pos-tables/index.html"><span>Pos</span><wbr><span><span>Tables</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1818321891%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-pos-tables/index.html">PosTables</a></div><div class="brief "><p class="paragraph">All schema tables, in foreign-key creation order.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1143545678%2FClasslikes%2F-457566013" anchor-label="PosViews" id="-1143545678%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pos-views/index.html"><span>Pos</span><wbr><span><span>Views</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1143545678%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-pos-views/index.html">PosViews</a></div><div class="brief "><p class="paragraph">Read-only views installed by supporting.sql; never passed to SchemaUtils.create().</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="243195099%2FClasslikes%2F-457566013" anchor-label="PurchaseOrderItemsTable" id="243195099%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-purchase-order-items-table/index.html"><span>Purchase</span><wbr><span>Order</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="243195099%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-purchase-order-items-table/index.html">PurchaseOrderItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Line items on a purchase order, one per raw item.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1101844882%2FClasslikes%2F-457566013" anchor-label="PurchaseOrdersTable" id="-1101844882%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-purchase-orders-table/index.html"><span>Purchase</span><wbr><span>Orders</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1101844882%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-purchase-orders-table/index.html">PurchaseOrdersTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Purchase orders placed with suppliers for raw items.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-482966560%2FClasslikes%2F-457566013" anchor-label="RawItemsTable" id="-482966560%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-raw-items-table/index.html"><span>Raw</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-482966560%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-raw-items-table/index.html">RawItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Inventory ingredients and packaging consumed by sales.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="214812779%2FClasslikes%2F-457566013" anchor-label="RawItemsToAllergenInfoTable" id="214812779%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-raw-items-to-allergen-info-table/index.html"><span>Raw</span><wbr><span>Items</span><wbr><span>To</span><wbr><span>Allergen</span><wbr><span>Info</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214812779%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-raw-items-to-allergen-info-table/index.html">RawItemsToAllergenInfoTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Many-to-many association of allergens with raw items.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1693133686%2FClasslikes%2F-457566013" anchor-label="RefundApprovalsTable" id="1693133686%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-refund-approvals-table/index.html"><span>Refund</span><wbr><span>Approvals</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1693133686%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-refund-approvals-table/index.html">RefundApprovalsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Manager approval workflow for refunds; at most one approval per refund.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1795164871%2FClasslikes%2F-457566013" anchor-label="RefundsTable" id="-1795164871%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-refunds-table/index.html"><span>Refunds</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1795164871%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-refunds-table/index.html">RefundsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Refunds issued against sales and optionally linked to the original payment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1842634222%2FClasslikes%2F-457566013" anchor-label="RegistersTable" id="1842634222%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-registers-table/index.html"><span>Registers</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1842634222%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-registers-table/index.html">RegistersTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Point-of-sale registers belonging to a store.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2055746860%2FClasslikes%2F-457566013" anchor-label="RolePermissionsTable" id="2055746860%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-role-permissions-table/index.html"><span>Role</span><wbr><span>Permissions</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2055746860%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-role-permissions-table/index.html">RolePermissionsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Many-to-many assignment of permissions to roles.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1850705723%2FClasslikes%2F-457566013" anchor-label="RolesTable" id="1850705723%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-roles-table/index.html"><span>Roles</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1850705723%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-roles-table/index.html">RolesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Named roles such as Manager, Cashier, and Admin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1306217527%2FClasslikes%2F-457566013" anchor-label="SaleDiscountsTable" id="-1306217527%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-discounts-table/index.html"><span>Sale</span><wbr><span>Discounts</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1306217527%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-discounts-table/index.html">SaleDiscountsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Discounts applied to a sale, keyed by sale and description.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1076528230%2FClasslikes%2F-457566013" anchor-label="SaleItemIngredientsTable" id="1076528230%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-item-ingredients-table/index.html"><span>Sale</span><wbr><span>Item</span><wbr><span>Ingredients</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1076528230%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-item-ingredients-table/index.html">SaleItemIngredientsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Snapshot of ingredient quantities consumed by a sale line.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2070007358%2FClasslikes%2F-457566013" anchor-label="SaleItemOptionsTable" id="-2070007358%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-item-options-table/index.html"><span>Sale</span><wbr><span>Item</span><wbr><span>Options</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2070007358%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-item-options-table/index.html">SaleItemOptionsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Configuration choices selected for a sale line item.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1168872009%2FClasslikes%2F-457566013" anchor-label="SaleItemsTable" id="-1168872009%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-items-table/index.html"><span>Sale</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1168872009%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-items-table/index.html">SaleItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Individual line items belonging to a sale.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-605219993%2FClasslikes%2F-457566013" anchor-label="SaleReturnItemsTable" id="-605219993%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-return-items-table/index.html"><span>Sale</span><wbr><span>Return</span><wbr><span>Items</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-605219993%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-return-items-table/index.html">SaleReturnItemsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Individual sale lines included in a return.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="790268666%2FClasslikes%2F-457566013" anchor-label="SaleReturnsTable" id="790268666%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-returns-table/index.html"><span>Sale</span><wbr><span>Returns</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="790268666%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-returns-table/index.html">SaleReturnsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Customer returns linked to a sale and optionally to a refund.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2104200522%2FClasslikes%2F-457566013" anchor-label="SalesTable" id="2104200522%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sales-table/index.html"><span>Sales</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2104200522%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sales-table/index.html">SalesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Sales transactions, including open carts, completed sales, voids, and refunds.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1312157232%2FClasslikes%2F-457566013" anchor-label="SaleTaxesTable" id="-1312157232%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sale-taxes-table/index.html"><span>Sale</span><wbr><span>Taxes</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1312157232%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sale-taxes-table/index.html">SaleTaxesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Per-sale tax breakdown lines.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-616746278%2FClasslikes%2F-457566013" anchor-label="StoresTable" id="-616746278%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stores-table/index.html"><span>Stores</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-616746278%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-stores-table/index.html">StoresTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Physical store locations that own registers, sales, and inventory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1900984383%2FClasslikes%2F-457566013" anchor-label="SupplierPaymentsTable" id="-1900984383%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-supplier-payments-table/index.html"><span>Supplier</span><wbr><span>Payments</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1900984383%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-supplier-payments-table/index.html">SupplierPaymentsTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Payments made to suppliers against purchase orders.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1168806491%2FClasslikes%2F-457566013" anchor-label="SuppliersTable" id="-1168806491%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-suppliers-table/index.html"><span>Suppliers</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1168806491%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-suppliers-table/index.html">SuppliersTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Vendors from which inventory is purchased.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1283467792%2FClasslikes%2F-457566013" anchor-label="TaxRatesTable" id="1283467792%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tax-rates-table/index.html"><span>Tax</span><wbr><span>Rates</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1283467792%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-tax-rates-table/index.html">TaxRatesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Time-bounded tax rates applied to sales at a store.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="489193968%2FClasslikes%2F-457566013" anchor-label="UserRolesTable" id="489193968%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-user-roles-table/index.html"><span>User</span><wbr><span>Roles</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="489193968%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-user-roles-table/index.html">UserRolesTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">Assignment of roles to users within a specific store.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="283504966%2FClasslikes%2F-457566013" anchor-label="UsersTable" id="283504966%2FClasslikes%2F-457566013" data-filterable-set=":lib-database/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-database/main" data-filterable-set=":lib-database/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-users-table/index.html"><span>Users</span><wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="283504966%2FClasslikes%2F-457566013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-database/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-users-table/index.html">UsersTable</a> : <span data-unresolved-link="org.jetbrains.exposed.v1.core/Table///PointingToDeclaration/">Table</span></div><div class="brief "><p class="paragraph">POS user accounts, including managers and cashiers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

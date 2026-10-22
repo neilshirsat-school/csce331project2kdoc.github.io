@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":app-cashier/main":[],":lib-logic/main":[],":app-manager/main":[],":app-launcher/main":[],":lib-database/main":[],":lib-ui/main":[]}'

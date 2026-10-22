@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>All modules</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
+<link href="images/logo-icon.svg">
+<link href="styles/custom.css" rel="Stylesheet">
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="index.html" tabindex="1">
+                    Share Tea POS
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.1.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageIds="Share Tea POS::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <div class="cover ">
+      <h1 class="">CSCE 331 Project 2 — Bubble-Tea POS + Inventory</h1>
+      <p class="paragraph">A Kotlin/Gradle desktop scaffold for the waterfall POS and inventory project. Both user-facing modules are JavaFX desktop applications; shared business/data code is isolated from UI code.</p>
+      <h2 class="">Environment and version selection</h2>
+      <p class="paragraph">Versions were selected after inspecting this machine on September 21, 2026:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-text" theme="idea">$ java -version<br>openjdk version &quot;26.0.2.1&quot; 2026-08-18<br>OpenJDK Runtime Environment (build 26.0.2.1+1-7)<br><br>$ javac -version<br>javac 26.0.2.1<br><br>$ kotlin -version<br>/usr/bin/bash: kotlin: command not found<br><br>$ gradle --version<br>Gradle 9.7.1<br>Kotlin: 2.4.0<br>Launcher JVM: 26.0.2.1<br>Daemon JVM: ...openjdk...26.0.2.1-1</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph">The build therefore pins Java/Kotlin to 26/2.4.0. JavaFX <code class="lang-kotlin">26.0.2</code> was selected because Maven Central lists the JavaFX controls artifact for the JDK 26 line. PostgreSQL JDBC <code class="lang-kotlin">42.7.8</code> was selected from the current Maven Central listing and supports this JDK. Dependencies are pinned in the module build files rather than guessed at runtime.</p>
+      <h2 class="">Modules</h2>
+      <ul>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">app-cashier</code>: JavaFX order-entry shell with menu, cart, totals, pay, and void placeholders.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">app-manager</code>: JavaFX shell for trends, inventory, and restock sections.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">lib-ui</code>: reusable JavaFX controls and theme; contains no business rules or JDBC.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">lib-logic</code>: domain models, mock menu catalog service/repository, service interfaces, JDBC configuration/repository skeletons; contains no JavaFX.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">lib-database</code>: Exposed JDBC database access, Exposed <code class="lang-kotlin">Table</code> objects for the POS schema, and the bundled PostgreSQL schema assets.</p>
+        </li>
+      </ul>
+      <p class="paragraph">The manager's Inventory view includes replenishment amounts in the ingredient table and pairs recent shipments with product usage for the last 30 days. The cards share a height and stack on narrow windows. Reports contains the X-report's daily totals and hourly breakdown. Both standalone application distributions include the other view at runtime so manager/cashier switching works when launched through either module's <code class="lang-kotlin">run</code> task or installed script.</p>
+      <p class="paragraph">Click an ingredient to open its inventory drawer. <strong>Replenish</strong> creates a submitted purchase order for the shortage below the notify-at level, subtracting quantities already on pending orders. It uses the ingredient's current unit cost and records the signed-in employee; stock changes when the order is received. The Menu and Employees tables fill the remaining page height and scroll their rows independently.</p>
+      <p class="paragraph">The inventory drawer edits ingredient details directly in a table; save changes before replenishing. On-hand corrections and metadata are saved together. Cashier customization navigation is temporarily disabled: clicking a card or its add button adds the default drink. Recipe drawers omit allergen information. Manager and cashier category filters use the categories present in their catalog items, and the manager menu form uses those same names. Ingredient creation uses the supported <code class="lang-kotlin">ingredient</code>/<code class="lang-kotlin">supply</code> category selector. X-report and employee performance tables share numeric alignment and table spacing.</p>
+      <p class="paragraph">The cashier depends on <code class="lang-kotlin">lib-ui</code>, <code class="lang-kotlin">lib-logic</code>, and <code class="lang-kotlin">lib-database</code>; the manager currently depends on <code class="lang-kotlin">lib-ui</code> and <code class="lang-kotlin">lib-logic</code>. All Kotlin packages use the <code class="lang-kotlin">sh.snt</code> namespace, with shared UI components under <code class="lang-kotlin">sh.snt.ui</code> and icons under <code class="lang-kotlin">sh.snt.ui.icons</code>.</p>
+      <p class="paragraph">The cashier view is based on the supplied reference: category chips, searchable drink cards, an order summary panel, and a warm neutral POS theme. With <code class="lang-kotlin">POS_DB_URL</code> configured, the cashier loads its menu through the Exposed query layer, including each item's <code class="lang-kotlin">image_url</code> and <code class="lang-kotlin">image_path</code>. Menu cards and the item detail view show the cached image first, then use the source URL if the local image file is unavailable. Without a configured database, the app uses the mock menu and shows the patterned placeholder for entries without image data. The shared icon components use Phosphor regular-weight SVG path shapes and are kept in <code class="lang-kotlin">lib-ui</code>; see <a href="https://phosphoricons.com/">Phosphor Icons</a> for the source icon family and license.</p>
+      <p class="paragraph">Haskoy is bundled under <code class="lang-kotlin">lib-ui/src/main/resources/fonts</code> with its SIL Open Font License and author notices. The Haskoy variable TTF and static Regular/Medium/Bold fallback faces are loaded locally by <code class="lang-kotlin">UiKit</code> before the JavaFX scene is shown, so the application does not fetch fonts over the network. JavaFX CSS maps UI roles to explicit normal/bold weights; the static faces ensure those weights remain visible on JavaFX versions that do not apply variable-font axes through CSS. The JavaFX root size is 14px, equivalent to 0.875rem in a 16px design system, and UI text does not go below 11px. The cashier order tabs use a full-width animated indicator, and interactive controls include hover and pressed-state feedback.</p>
+      <h2 class="">Commands</h2>
+      <p class="paragraph">Use the generated Gradle wrapper for repeatable builds:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-bash" theme="idea">./gradlew build<br>./gradlew :app-cashier:run<br>./gradlew :app-manager:run<br>./gradlew :app-launcher:run<br>./run-app.sh cashier<br>./run-app.sh manager<br>./run-app.sh build</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph"><code class="lang-kotlin">run-app.sh</code> is executable and provides the same app commands through one small CLI dispatcher. The <code class="lang-kotlin">cashier</code> and <code class="lang-kotlin">manager</code> commands are legacy aliases for the packaged <code class="lang-kotlin">app-launcher</code>; both therefore show the shared sign-in first and dispatch by authenticated capabilities. JavaFX apps require a graphical desktop session; stop them with Ctrl+C.</p>
+      <p class="paragraph">On Windows Git Bash, the same <code class="lang-kotlin">./gradlew</code> commands work. The JavaFX-free logic test is run by <code class="lang-kotlin">./gradlew :lib-logic:test</code>.</p>
+      <h2 class="">Database configuration</h2>
+      <p class="paragraph">Startup requires a configured endpoint. If none is present, the launcher keeps the shared sign-in page visible; the masked-password setup dialog opens only after an explicit Database settings action. The dialog tests asynchronously and can save non-secret endpoint settings to <code class="lang-kotlin">$HOME/.share-tea/.env</code> (passwords are never persisted there). Environment variables take precedence over a repository-root <code class="lang-kotlin">.env</code>, which takes precedence over the per-user file. The checked-in <code class="lang-kotlin">.env.example</code> template is never read as credentials. Settings can be reset by removing the per-user file or choosing a new endpoint in the dialog. A packaged launch uses the same per-user location; <code class="lang-kotlin">./run-app.sh cashier</code> and <code class="lang-kotlin">./run-app.sh manager</code> remain the supported launch commands. SSL defaults to <code class="lang-kotlin">prefer</code>, not <code class="lang-kotlin">require</code>. Unreachable endpoints can be recovered with <strong>Retry/Edit</strong> in the setup dialog; check host, port, database, credentials, firewall access, and PostgreSQL SSL mode when troubleshooting.</p>
+      <p class="paragraph">No secrets are committed. The JDBC scaffold reads:</p>
+      <ul>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">POS_DB_URL</code> (optional complete JDBC URL), or <code class="lang-kotlin">POS_DB_HOST</code>, <code class="lang-kotlin">POS_DB_PORT</code>, and <code class="lang-kotlin">POS_DB_NAME</code></p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">POS_DB_USER</code> and <code class="lang-kotlin">POS_DB_PASSWORD</code></p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">POS_DB_SSLMODE</code> (default <code class="lang-kotlin">prefer</code>) and <code class="lang-kotlin">POS_DB_READ_ONLY=true</code> for safe inspection</p>
+        </li>
+      </ul>
+      <p class="paragraph">The equivalent libpq names (<code class="lang-kotlin">PGHOST</code>, <code class="lang-kotlin">PGPORT</code>, <code class="lang-kotlin">PGDATABASE</code>, <code class="lang-kotlin">PGUSER</code>, <code class="lang-kotlin">PGPASSWORD</code>, and <code class="lang-kotlin">PGSSLMODE</code>) are accepted. Passwords are read from the process environment only and are never printed or placed in source, reports, screenshots, or test artifacts. <code class="lang-kotlin">PosDatabaseConfig.fromEnvironment()</code> builds the JDBC URL and adds PostgreSQL's transaction-level read-only default when <code class="lang-kotlin">POS_DB_READ_ONLY</code> is enabled.</p>
+      <p class="paragraph">The deployed course database uses the condensed ten-table schema. Desktop clients access it through <code class="lang-kotlin">PosRepositories</code>, which detects the available columns and tables. Categories, role assignments, password hashes, inventory balances, and payment methods are stored inline in that schema. Receiving uses the existing purchase-order trigger. See SCHEMA_COMPATIBILITY.md for report mappings and isolated PostgreSQL regression-test instructions.</p>
+      <p class="paragraph"><code class="lang-kotlin">design.sql</code> defines the original 51-table local fixture. The module defines an Exposed <code class="lang-kotlin">Table</code> object for every fixture table and uses <code class="lang-kotlin">SchemaUtils.create()</code> to build those tables, including their columns, primary and foreign keys, unique indexes, generated columns, identity columns, and check constraints. It then applies <code class="lang-kotlin">supporting.sql</code> for PostgreSQL views, indexes, functions, and triggers. Both files are bundled as <code class="lang-kotlin">/db/design.sql</code> and <code class="lang-kotlin">/db/supporting.sql</code>; schema creation uses the Exposed objects for tables and the supporting script for PostgreSQL-specific objects. <code class="lang-kotlin">PosDatabase.createSchemaIfEmpty()</code> runs transactionally when the active schema has no tables. <code class="lang-kotlin">PosViews</code> contains read-only mappings for the three fixture reporting views. When working against this original fixture, database work runs in <code class="lang-kotlin">PosDatabase.transaction { ... }</code>; import a table object and use Exposed's DSL to query or update it:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">import org.jetbrains.exposed.v1.jdbc.selectAll<br>import org.jetbrains.exposed.v1.core.eq<br>import sh.snt.database.PosDatabase<br>import sh.snt.database.tables.StoresTable<br><br>val activeStores = PosDatabase().transaction {<br>    StoresTable.selectAll().where { StoresTable.isActive eq true }.toList()<br>}</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph"><code class="lang-kotlin">PosTables.all</code> lists all 51 base table objects. <code class="lang-kotlin">PosViews.all</code> lists the three read-only view mappings.</p>
+      <p class="paragraph"><code class="lang-kotlin">sh.snt.database.query.SupportingQueries</code> provides typed Exposed queries for <code class="lang-kotlin">cash_history</code>, <code class="lang-kotlin">inventory_history</code>, <code class="lang-kotlin">inventory_on_hand</code>, and unresolved low-stock alerts. For example, <code class="lang-kotlin">SupportingQueries.inventoryHistory(storeId = 1, rawItemId = 8)</code> returns an Exposed <code class="lang-kotlin">Query</code> that can be consumed inside <code class="lang-kotlin">PosDatabase.transaction { ... }</code>. The dry-run test prepares each query with Exposed and asks an in-memory H2 database for an <code class="lang-kotlin">EXPLAIN</code> plan; it does not modify data or require PostgreSQL.</p>
+      <p class="paragraph">The read-only schema comparison for the pinned condensed course schema is in SCHEMA_COMPATIBILITY.md. It documents the users, roles, password-hash, sales, inventory, and allergen coverage matrix, the observed shared-database inspection, and the local-fixture/additive-migration boundary. <code class="lang-kotlin">lib-database/src/main/resources/db/compatibility.sql</code> is a review note only; it is deliberately not applied automatically.</p>
+      <p class="paragraph">The complete cashier and manager read-query inventory is documented in lib-database/QUERY_CATALOG.md. <code class="lang-kotlin">CashierQueries</code>, <code class="lang-kotlin">ManagerQueries</code>, and <code class="lang-kotlin">SupportingQueries</code> expose all 66 catalogued query builders.</p>
+      <p class="paragraph">Add <code class="lang-kotlin">implementation(project(&quot;:lib-database&quot;))</code> to an app or library that needs persistence. <code class="lang-kotlin">lib-database</code> uses JetBrains Exposed 1.5.0 (<code class="lang-kotlin">exposed-jdbc</code>) and PostgreSQL JDBC. Its Kotlin sources are formatted with Spotless and ktlint: run <code class="lang-kotlin">./gradlew :lib-database:spotlessApply</code> to format or <code class="lang-kotlin">./gradlew :lib-database:spotlessCheck</code> to check formatting.</p>
+      <h3 class="">In-process view shortcuts</h3>
+      <p class="paragraph">After authentication, manager/dual-role users can switch destinations in the same window with <strong>Ctrl+Shift+M</strong> (Manager) and <strong>Ctrl+Shift+C</strong> (Cashier). The profile menu exposes the same actions. Cashier-only accounts are never elevated by a shortcut; manager authentication is required. Same-user switching retains the active cashier cart, while logout/account changes require confirmation before disposing a non-empty cart.</p>
+      <h2 class="">GUI / SQL demonstration</h2>
+      <p class="paragraph">Run <code class="lang-kotlin">powershell -File tools/query-walkthrough/walkthrough.ps1</code> or <code class="lang-kotlin">bash tools/query-walkthrough/walkthrough.sh</code> while the POS is open. Perform each GUI action, return to the terminal, and press Tab to rerun its read-only SQL and show the database change. See the tools/query-walkthrough/README.md and docs/MANAGER_REPORTS.md.</p>
+      <h1 class="">Architecture</h1>
+      <p class="paragraph">Share Tea POS is a multi-module Kotlin/JVM desktop application. Modules are deliberately layered so that business rules stay independent of JavaFX and database technology.</p>
+      <h2 class="">Module graph</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-text" theme="idea">app-launcher ──▶ app-cashier ──▶ lib-ui ──▶ lib-logic<br>      │              │              │            ▲<br>      ├──────────────┴──────────────┴──▶ lib-database ──▶ lib-logic<br>      │<br>      └──▶ app-manager ──▶ lib-ui, lib-logic, lib-database</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <div class="table--container">
+        <table>
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Responsibility</th>
+              <th>Must not depend on</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-launcher</code></td>
+              <td>Sign-in, database readiness probe, capability-based dispatch</td>
+              <td>Feature UI internals</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-cashier</code></td>
+              <td>Order entry, cart, customization, checkout</td>
+              <td>Manager screens</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-manager</code></td>
+              <td>Reporting, inventory, menu/employee administration</td>
+              <td>Cashier screens</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-ui</code></td>
+              <td>Reusable JavaFX controls, theme, dialogs, motion/numeric specs</td>
+              <td>JDBC or business rules</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-logic</code></td>
+              <td>Domain models, pure services, repository contracts, auth models</td>
+              <td>JavaFX</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-database</code></td>
+              <td>Exposed tables, SQL queries, repositories, schema bootstrap</td>
+              <td>JavaFX</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2 class="">Layering rules</h2>
+      <ol>
+        <li>
+          <p class="paragraph"><strong>UI depends inward.</strong> JavaFX code may call <code class="lang-kotlin">lib-logic</code> services and    <code class="lang-kotlin">lib-database</code> repositories, but no lower layer imports JavaFX.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Pure rules stay pure.</strong> Pricing, payment validation, inventory status,    category filtering, and report aggregation live in <code class="lang-kotlin">sh.snt.logic.service</code>    and are directly unit-testable.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Repositories are contracts.</strong> <code class="lang-kotlin">sh.snt.logic.repo</code> defines interfaces used    by services; <code class="lang-kotlin">sh.snt.database.repository</code> provides JDBC/Exposed adapters.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Tables mirror PostgreSQL.</strong> Exposed <code class="lang-kotlin">Table</code> objects in    <code class="lang-kotlin">sh.snt.database.tables</code> are the single source of truth for column names,    defaults, and foreign keys.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Schema compatibility is explicit.</strong> Bootstrap and reporting code probe for    optional views/tables before using them, so older databases keep working.</p>
+        </li>
+      </ol>
+      <h2 class="">Runtime flow</h2>
+      <ol>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">PosLauncher</code> installs the shared sign-in scene and starts a background    connection probe.</p>
+        </li>
+        <li>
+          <p class="paragraph">Successful authentication publishes an <code class="lang-kotlin">AuthenticatedUser</code> through    <code class="lang-kotlin">StartupHandoff</code>.</p>
+        </li>
+        <li>
+          <p class="paragraph">The launcher opens <code class="lang-kotlin">ManagerApp</code> when the user can manage, otherwise    <code class="lang-kotlin">CashierApp</code> when the user can sell.</p>
+        </li>
+        <li>
+          <p class="paragraph">Both shells load data through repositories and fall back to local fixtures    when the database is unavailable (cashier menu only).</p>
+        </li>
+      </ol>
+      <h1 class="">Getting started</h1>
+      <h2 class="">Prerequisites</h2>
+      <ul>
+        <li>
+          <p class="paragraph">JDK 26</p>
+        </li>
+        <li>
+          <p class="paragraph">Gradle is provided by the wrapper (<code class="lang-kotlin">gradlew</code> / <code class="lang-kotlin">gradlew.bat</code>)</p>
+        </li>
+        <li>
+          <p class="paragraph">A graphical desktop session for the JavaFX applications</p>
+        </li>
+        <li>
+          <p class="paragraph">PostgreSQL for live data (the cashier can use its bundled mock menu without it)</p>
+        </li>
+      </ul>
+      <h2 class="">Build and run</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-bash" theme="idea">./gradlew build<br>./gradlew :app-launcher:run<br>./gradlew :app-cashier:run<br>./gradlew :app-manager:run</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph">On Windows use <code class="lang-kotlin">gradlew.bat</code> instead of <code class="lang-kotlin">./gradlew</code>.</p>
+      <h2 class="">Database configuration</h2>
+      <p class="paragraph">The launcher reads <code class="lang-kotlin">POS_DB_URL</code>, <code class="lang-kotlin">POS_DB_USER</code>, and <code class="lang-kotlin">POS_DB_PASSWORD</code> from the environment (or the local <code class="lang-kotlin">.env</code> used by the run scripts). The database is probed asynchronously after the sign-in scene appears; connection failures are reported inline rather than opening a separate setup window.</p>
+      <h2 class="">Generate API documentation</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-bash" theme="idea">./gradlew :dokkaGenerate</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph">The aggregated HTML site is written to <code class="lang-kotlin">build/dokka/html/index.html</code>. It includes module and package descriptions from each module's <code class="lang-kotlin">Module.md</code>, source links to this repository, and the extra guides in <code class="lang-kotlin">docs/dokka</code>.</p>
+      <h2 class="">Project layout</h2>
+      <div class="table--container">
+        <table>
+          <thead>
+            <tr>
+              <th>Path</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-cashier/</code></td>
+              <td>Cashier-facing order entry application</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-manager/</code></td>
+              <td>Manager reporting and administration application</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">app-launcher/</code></td>
+              <td>Shared sign-in and capability-based startup</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-ui/</code></td>
+              <td>Reusable JavaFX controls and design specifications</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-logic/</code></td>
+              <td>Domain models, pure services, repository contracts</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">lib-database/</code></td>
+              <td>Exposed schema, queries, repositories, bootstrap</td>
+            </tr>
+            <tr>
+              <td><code class="org.jetbrains.dokka.pages.commenttable@38f09fe lang-kotlin">docs/</code></td>
+              <td>Engineering notes and documentation-site sources</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h1 class="">Domain model and business rules</h1>
+      <p class="paragraph">This page summarizes the concepts shared by both desktop shells. The canonical types live in <code class="lang-kotlin">sh.snt.logic.model</code> and <code class="lang-kotlin">sh.snt.logic.service</code>.</p>
+      <h2 class="">Money</h2>
+      <p class="paragraph">All monetary amounts are integer cents (<code class="lang-kotlin">Int</code>) at the UI and order layer, and <code class="lang-kotlin">NUMERIC</code>/<code class="lang-kotlin">BigDecimal</code> at the database and reporting layer. Convert only at the boundary:</p>
+      <ul>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">OrderService.totals</code> returns <code class="lang-kotlin">OrderTotals</code> in cents.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">PaymentService.parseAmount</code> converts user text to cents, rejecting more than   two decimal places.</p>
+        </li>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">SalesAnalyticsService</code> returns <code class="lang-kotlin">BigDecimal</code> amounts rounded half-up to two   decimal places.</p>
+        </li>
+      </ul>
+      <h2 class="">Orders</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">val order = OrderService()<br>    .addItem(Order(), item = latte, quantity = 2)<br>    .let { orderService.updateQuantity(it, lineIndex = 0, quantity = 3) }<br><br>val totals = orderService.totals(order, discountCode = &quot;BOBA10&quot;)</code></pre>
+<span class="copy-tooltip">
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+<span class="copy-icon"></span></span></div>
+      <p class="paragraph"><code class="lang-kotlin">Order</code> and <code class="lang-kotlin">OrderLine</code> are immutable value objects. Every editing operation returns a new instance, which keeps undo/redo and JavaFX state updates simple.</p>
+      <h2 class="">Inventory</h2>
+      <p class="paragraph"><code class="lang-kotlin">CartInventory</code> is a read-only snapshot of ingredient stock and per-serving recipe requirements. It derives requirements for a cart, reports shortages, and computes how many additional servings can be made. It never writes reservations to the database; availability is re-validated during checkout.</p>
+      <p class="paragraph">Inventory quantities accept at most three decimal places to match <code class="lang-kotlin">NUMERIC(12,3)</code>. The low-stock threshold is inclusive: <code class="lang-kotlin">onHand &lt;= notifyAt</code> is considered low.</p>
+      <h2 class="">Authentication</h2>
+      <p class="paragraph">Passwords are hashed with PBKDF2-HMAC-SHA256 and per-user salts. Authentication results distinguish success, invalid credentials, and disabled accounts. <code class="lang-kotlin">AuthenticatedUser</code> exposes role and permission sets used by the launcher to select the manager or cashier shell.</p>
+      <h2 class="">Reporting</h2>
+      <p class="paragraph">Reports are computed from immutable sale snapshots. Voids and open orders are excluded; refunds reduce net sales without creating a second order. Date ranges are half-open: <code class="lang-kotlin">[fromInclusive, untilExclusive)</code>.</p>
+    </div>
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="-2068644329%2FMain%2F0" anchor-label="Business Logic" id="-2068644329%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="lib-logic/index.html">Business Logic</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2068644329%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph"><code class="lang-kotlin">lib-logic</code> contains the domain model and all business rules that do not depend on JavaFX or a specific database. Everything here is plain Kotlin/JVM and can be unit-tested without a desktop session.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1458270473%2FMain%2F0" anchor-label="Cashier App" id="1458270473%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="app-cashier/index.html">Cashier App</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1458270473%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">The cashier application is a JavaFX order-entry shell. It loads the menu, supports customization and cart editing, validates stock, and completes payment through the shared services and repositories.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1754343831%2FMain%2F0" anchor-label="Database Layer" id="-1754343831%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="lib-database/index.html">Database Layer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754343831%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph"><code class="lang-kotlin">lib-database</code> owns everything that touches PostgreSQL: the Exposed table definitions, SQL query builders, repository implementations, schema bootstrap, and operational reports. It depends on <code class="lang-kotlin">lib-logic</code> for domain types but never on JavaFX.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-836533611%2FMain%2F0" anchor-label="Launcher" id="-836533611%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="app-launcher/index.html">Launcher</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-836533611%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">The launcher is the packaged entry point for the desktop client. It installs the shared sign-in experience, probes database readiness in the background, and dispatches to the manager or cashier shell according to the authenticated user's capabilities.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="780020831%2FMain%2F0" anchor-label="Manager App" id="780020831%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="app-manager/index.html">Manager App</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="780020831%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">The manager application is a JavaFX administration and reporting shell. It combines live dashboard cards with table views for inventory, menu, employees, sales, and operational reports.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-2000312469%2FMain%2F0" anchor-label="UI Kit" id="-2000312469%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="lib-ui/index.html">UI Kit</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2000312469%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph"><code class="lang-kotlin">lib-ui</code> is the shared JavaFX presentation layer. It contains reusable controls, the application theme, desktop chrome, dialogs, icons, and design specifications. It has no JDBC or repository dependencies.</p>
+            </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Share Tea POS · CSCE 331 Project 2 · Group 92</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

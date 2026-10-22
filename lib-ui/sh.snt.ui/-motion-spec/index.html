@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MotionSpec</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-ui/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-ui/main" data-filter=":lib-ui/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="UI Kit::sh.snt.ui/MotionSpec///PointingToDeclaration//-2033258852">
+  <div class="breadcrumbs"><a href="../../index.html">UI Kit</a><span class="delimiter">/</span><a href="../index.html">sh.snt.ui</a><span class="delimiter">/</span><span class="current">MotionSpec</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Motion</span><wbr><span><span>Spec</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">MotionSpec</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/CSCE-331-Fall-2026-901-912/Project2-Group92/blob/main/lib-ui/src/main/kotlin/sh/snt/ui/MotionSpec.kt#L31">source</a>)</span></span></div><p class="paragraph">The shared motion contract for the two applications.</p><p class="paragraph">Keep the animation implementation here rather than making each screen subtly different.  <a href="-axis/-h-o-r-i-z-o-n-t-a-l/index.html">Axis.HORIZONTAL</a> is used by the cashier's order-type rail and <a href="-axis/-v-e-r-t-i-c-a-l/index.html">Axis.VERTICAL</a> by the manager navigation indicator; both use the same duration, easing and interruption behavior.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-973522016%2FClasslikes%2F-2033258852" anchor-label="Axis" id="-973522016%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-axis/index.html"><span><span>Axis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-973522016%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-axis/index.html">Axis</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-axis/index.html">MotionSpec.Axis</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Axis along which an indicator or drawer moves.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1676057094%2FClasslikes%2F-2033258852" anchor-label="DrawerMotion" id="-1676057094%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-drawer-motion/index.html"><span>Drawer</span><wbr><span><span>Motion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1676057094%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-drawer-motion/index.html">DrawerMotion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Right-edge drawer motion: translate and opacity only, never layout.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="690293564%2FClasslikes%2F-2033258852" anchor-label="IndicatorMotion" id="690293564%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-indicator-motion/index.html"><span>Indicator</span><wbr><span><span>Motion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690293564%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-indicator-motion/index.html">IndicatorMotion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">axis<span class="token operator">: </span><a href="-axis/index.html">MotionSpec.Axis</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A retargetable one-axis motion.  Reading the current position before stopping is important: a rapid selection change continues from the visible intermediate frame instead of jumping back to the old endpoint.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="19219166%2FClasslikes%2F-2033258852" anchor-label="ModalMotion" id="19219166%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-modal-motion/index.html"><span>Modal</span><wbr><span><span>Motion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="19219166%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-modal-motion/index.html">ModalMotion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">panel<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">backdrop<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Centered modal motion: a restrained scale with a coordinated veil fade.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-215050302%2FClasslikes%2F-2033258852" anchor-label="RouteMotion" id="-215050302%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-route-motion/index.html"><span>Route</span><wbr><span><span>Motion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-215050302%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-route-motion/index.html">RouteMotion</a></div><div class="brief "><p class="paragraph">The small opacity/slide route transition used for item pages.  It owns the active transition so a back/open action can safely interrupt a prior one without a stale completion callback changing the next route.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-319942968%2FClasslikes%2F-2033258852" anchor-label="SuccessMotion" id="-319942968%2FClasslikes%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-success-motion/index.html"><span>Success</span><wbr><span><span>Motion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-319942968%2FClasslikes%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-success-motion/index.html">SuccessMotion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A restrained acknowledgement for the centered payment-success state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-403865215%2FProperties%2F-2033258852" anchor-label="drawerDurationMillis" id="-403865215%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="drawer-duration-millis.html"><span>drawer</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-403865215%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="drawer-duration-millis.html">drawerDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">220.0</span></div><div class="brief "><p class="paragraph">Duration in milliseconds of drawer open/close motion.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2113281936%2FProperties%2F-2033258852" anchor-label="drawerEasing" id="-2113281936%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="drawer-easing.html"><span>drawer</span><wbr><span><span>Easing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2113281936%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="drawer-easing.html">drawerEasing</a><span class="token operator">: </span><span data-unresolved-link="javafx.animation/Interpolator///PointingToDeclaration/">Interpolator</span></div><div class="brief "><p class="paragraph">Drawer movement uses the recipe's iOS-like curve.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="529095009%2FProperties%2F-2033258852" anchor-label="drawerTravel" id="529095009%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="drawer-travel.html"><span>drawer</span><wbr><span><span>Travel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="529095009%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="drawer-travel.html">drawerTravel</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">20.0</span></div><div class="brief "><p class="paragraph">Drawer offset in logical pixels when closed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-655471865%2FProperties%2F-2033258852" anchor-label="modalDurationMillis" id="-655471865%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="modal-duration-millis.html"><span>modal</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-655471865%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="modal-duration-millis.html">modalDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">220.0</span></div><div class="brief "><p class="paragraph">Duration in milliseconds of modal open/close motion.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="23276473%2FProperties%2F-2033258852" anchor-label="modalStartScale" id="23276473%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="modal-start-scale.html"><span>modal</span><wbr><span>Start</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="23276473%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="modal-start-scale.html">modalStartScale</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.96</span></div><div class="brief "><p class="paragraph">Starting scale for a centered modal panel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="502375601%2FProperties%2F-2033258852" anchor-label="pressDurationMillis" id="502375601%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="press-duration-millis.html"><span>press</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="502375601%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="press-duration-millis.html">pressDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">120.0</span></div><div class="brief "><p class="paragraph">Duration in milliseconds of press-scale feedback.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1757670250%2FProperties%2F-2033258852" anchor-label="reducedDurationMillis" id="-1757670250%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reduced-duration-millis.html"><span>reduced</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1757670250%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="reduced-duration-millis.html">reducedDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">100.0</span></div><div class="brief "><p class="paragraph">Reduced-motion duration in milliseconds applied to every animation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1017267421%2FProperties%2F-2033258852" anchor-label="routeEnterDurationMillis" id="-1017267421%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="route-enter-duration-millis.html"><span>route</span><wbr><span>Enter</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1017267421%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="route-enter-duration-millis.html">routeEnterDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Route entrances retain the same fast contract as the shared indicator. Exits are deliberately shorter and cover less ground so the next page owns the visual emphasis instead of two full-page slides competing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="547995885%2FProperties%2F-2033258852" anchor-label="routeExitDurationMillis" id="547995885%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="route-exit-duration-millis.html"><span>route</span><wbr><span>Exit</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="547995885%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="route-exit-duration-millis.html">routeExitDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">120.0</span></div><div class="brief "><p class="paragraph">Route exit duration in milliseconds; shorter than the entrance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="687981773%2FProperties%2F-2033258852" anchor-label="routeExitTravel" id="687981773%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="route-exit-travel.html"><span>route</span><wbr><span>Exit</span><wbr><span><span>Travel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="687981773%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="route-exit-travel.html">routeExitTravel</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">6.0</span></div><div class="brief "><p class="paragraph">Route exit travel in logical pixels; smaller than <a href="route-travel.html">routeTravel</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1004559819%2FProperties%2F-2033258852" anchor-label="routeTravel" id="1004559819%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="route-travel.html"><span>route</span><wbr><span><span>Travel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1004559819%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="route-travel.html">routeTravel</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">10.0</span></div><div class="brief "><p class="paragraph">Route entrance travel in logical pixels.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1904186253%2FProperties%2F-2033258852" anchor-label="sharedDurationMillis" id="1904186253%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="shared-duration-millis.html"><span>shared</span><wbr><span>Duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1904186253%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="shared-duration-millis.html">sharedDurationMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">160.0</span></div><div class="brief "><p class="paragraph">Default duration in milliseconds for shared indicator and fade motion.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2049228412%2FProperties%2F-2033258852" anchor-label="sharedEasing" id="2049228412%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="shared-easing.html"><span>shared</span><wbr><span><span>Easing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2049228412%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="shared-easing.html">sharedEasing</a><span class="token operator">: </span><span data-unresolved-link="javafx.animation/Interpolator///PointingToDeclaration/">Interpolator</span></div><div class="brief "><p class="paragraph">Emil's strong UI ease-out: quick feedback without a sluggish tail.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681505891%2FProperties%2F-2033258852" anchor-label="successStartScale" id="1681505891%2FProperties%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="success-start-scale.html"><span>success</span><wbr><span>Start</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681505891%2FProperties%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="success-start-scale.html">successStartScale</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.96</span></div><div class="brief "><p class="paragraph">Starting scale for the payment-success acknowledgement.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="561285043%2FFunctions%2F-2033258852" anchor-label="animateOpacity" id="561285043%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="animate-opacity.html"><span>animate</span><wbr><span><span>Opacity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="561285043%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="animate-opacity.html"><span class="token function">animateOpacity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span>sharedDurationMillis<span class="token punctuation">, </span></span><span class="parameter ">onFinished<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Retargetable opacity helper for small disclosure/content transitions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1288119777%2FFunctions%2F-2033258852" anchor-label="animateRotation" id="-1288119777%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="animate-rotation.html"><span>animate</span><wbr><span><span>Rotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1288119777%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="animate-rotation.html"><span class="token function">animateRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span>sharedDurationMillis</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Interruptible chevron/disclosure rotation; reduced motion snaps it.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1220219637%2FFunctions%2F-2033258852" anchor-label="animateScale" id="-1220219637%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="animate-scale.html"><span>animate</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1220219637%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="animate-scale.html"><span class="token function">animateScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span>pressDurationMillis</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Interruptible scale feedback shared by buttons and selectable chips.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-225622126%2FFunctions%2F-2033258852" anchor-label="durationMillis" id="-225622126%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="duration-millis.html"><span>duration</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-225622126%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="duration-millis.html"><span class="token function">durationMillis</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">normal<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Returns <a href="duration-millis.html">normal</a> unless reduced motion is enabled, in which case the shortened <a href="reduced-duration-millis.html">reducedDurationMillis</a> is returned.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-490547679%2FFunctions%2F-2033258852" anchor-label="interpolate" id="-490547679%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="interpolate.html"><span><span>interpolate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-490547679%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="interpolate.html"><span class="token function">interpolate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">from<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">to<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">fraction<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Linear interpolation with the fraction clamped to <code class="lang-kotlin">0.0..1.0</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="93021606%2FFunctions%2F-2033258852" anchor-label="positionTrace" id="93021606%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="position-trace.html"><span>position</span><wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="93021606%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="position-trace.html"><span class="token function">positionTrace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">from<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">to<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">frames<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A deterministic trace used by visual verification and focused tests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1102043077%2FFunctions%2F-2033258852" anchor-label="pressedScale" id="1102043077%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pressed-scale.html"><span>pressed</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1102043077%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="pressed-scale.html"><span class="token function">pressedScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fraction<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.96</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Scale factor for a press animation at <a href="pressed-scale.html">fraction</a> progress.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1489696641%2FFunctions%2F-2033258852" anchor-label="reducedMotionEnabled" id="-1489696641%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reduced-motion-enabled.html"><span>reduced</span><wbr><span>Motion</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1489696641%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="reduced-motion-enabled.html"><span class="token function">reducedMotionEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">JavaFX has no browser-style prefers-reduced-motion media query.  Keep the app-level switch in this shared contract so both applications take the same accessible path.  The system property/env var also makes it possible to launch either app accessibly without changing the UI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-419995914%2FFunctions%2F-2033258852" anchor-label="segmentedIndicatorX" id="-419995914%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="segmented-indicator-x.html"><span>segmented</span><wbr><span>Indicator</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-419995914%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="segmented-indicator-x.html"><span class="token function">segmentedIndicatorX</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">containerWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">selectedIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">segmentCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span><span class="token punctuation">, </span></span><span class="parameter ">inset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">6.0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">X offset of a segmented-control indicator.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1585095312%2FFunctions%2F-2033258852" anchor-label="setReducedMotionOverride" id="1585095312%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-reduced-motion-override.html"><span>set</span><wbr><span>Reduced</span><wbr><span>Motion</span><wbr><span><span>Override</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1585095312%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-reduced-motion-override.html"><span class="token function">setReducedMotionOverride</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Test/accessibility hook; null returns control to the launch setting.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1220192582%2FFunctions%2F-2033258852" anchor-label="sidebarIndicatorY" id="1220192582%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sidebar-indicator-y.html"><span>sidebar</span><wbr><span>Indicator</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1220192582%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="sidebar-indicator-y.html"><span class="token function">sidebarIndicatorY</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rowY<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">rowHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">indicatorHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief "><p class="paragraph">Vertically centers a navigation indicator within a row.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

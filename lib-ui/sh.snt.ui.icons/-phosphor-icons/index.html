@@ -1,0 +1,471 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PhosphorIcons</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Share Tea POS
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":lib-ui/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":lib-ui/main" data-filter=":lib-ui/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Share Tea POS
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="UI Kit::sh.snt.ui.icons/PhosphorIcons///PointingToDeclaration//-2033258852">
+  <div class="breadcrumbs"><a href="../../index.html">UI Kit</a><span class="delimiter">/</span><a href="../index.html">sh.snt.ui.icons</a><span class="delimiter">/</span><span class="current">PhosphorIcons</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Phosphor</span><wbr><span><span>Icons</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">PhosphorIcons</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/CSCE-331-Fall-2026-901-912/Project2-Group92/blob/main/lib-ui/src/main/kotlin/sh/snt/ui/icons/PhosphorIcons.kt#L23">source</a>)</span></span></div><p class="paragraph">Builds Phosphor icons from the committed SVG source files in lib-ui resources. The source SVGs remain the canonical artwork; JavaFX receives their path nodes at runtime so applications do not duplicate icon path data.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-469136131%2FFunctions%2F-2033258852" anchor-label="arrowLeft" id="-469136131%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="arrow-left.html"><span>arrow</span><wbr><span><span>Left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-469136131%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="arrow-left.html"><span class="token function">arrowLeft</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#85827b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the left arrow (back) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1126320448%2FFunctions%2F-2033258852" anchor-label="arrowRight" id="1126320448%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="arrow-right.html"><span>arrow</span><wbr><span><span>Right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1126320448%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="arrow-right.html"><span class="token function">arrowRight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"white"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the right arrow (continue) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1008945571%2FFunctions%2F-2033258852" anchor-label="card" id="1008945571%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="card.html"><span><span>card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1008945571%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="card.html"><span class="token function">card</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the credit-card icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-967515512%2FFunctions%2F-2033258852" anchor-label="caretDown" id="-967515512%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="caret-down.html"><span>caret</span><wbr><span><span>Down</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-967515512%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="caret-down.html"><span class="token function">caretDown</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#85827b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the downward caret used for expandable content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-227626961%2FFunctions%2F-2033258852" anchor-label="caretUp" id="-227626961%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="caret-up.html"><span>caret</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-227626961%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="caret-up.html"><span class="token function">caretUp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#85827b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the upward caret used for collapsible content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1179975648%2FFunctions%2F-2033258852" anchor-label="cash" id="1179975648%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cash.html"><span><span>cash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179975648%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="cash.html"><span class="token function">cash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#8a8c91"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the cash (bank) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-545899227%2FFunctions%2F-2033258852" anchor-label="check" id="-545899227%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check.html"><span><span>check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-545899227%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="check.html"><span class="token function">check</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">22</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#25865e"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the success check icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1838088757%2FFunctions%2F-2033258852" anchor-label="close" id="1838088757%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1838088757%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#85827b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the close (x) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="218366447%2FFunctions%2F-2033258852" anchor-label="cup" id="218366447%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cup.html"><span><span>cup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="218366447%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="cup.html"><span class="token function">cup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">56</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#635b4d"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the cup icon used by menu imagery and placeholders.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1027986926%2FFunctions%2F-2033258852" anchor-label="discount" id="-1027986926%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="discount.html"><span><span>discount</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1027986926%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="discount.html"><span class="token function">discount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#8a8c91"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the discount (coins) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1431268920%2FFunctions%2F-2033258852" anchor-label="employees" id="-1431268920%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="employees.html"><span><span>employees</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1431268920%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="employees.html"><span class="token function">employees</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#30343b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the employees (users) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-265286447%2FFunctions%2F-2033258852" anchor-label="inventory" id="-265286447%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="inventory.html"><span><span>inventory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-265286447%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="inventory.html"><span class="token function">inventory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#30343b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the inventory (archive) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1978151732%2FFunctions%2F-2033258852" anchor-label="menu" id="1978151732%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="menu.html"><span><span>menu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1978151732%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="menu.html"><span class="token function">menu</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#30343b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the menu (tray) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1928664862%2FFunctions%2F-2033258852" anchor-label="minus" id="-1928664862%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="minus.html"><span><span>minus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1928664862%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Decrease"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the minus icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="629495166%2FFunctions%2F-2033258852" anchor-label="plus" id="629495166%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="629495166%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Add"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Plain Phosphor plus. Circular affordances add their own background.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-884750386%2FFunctions%2F-2033258852" anchor-label="plusCircle" id="-884750386%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus-circle.html"><span>plus</span><wbr><span><span>Circle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-884750386%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="plus-circle.html"><span class="token function">plusCircle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"Add"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the circular plus icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="74295457%2FFunctions%2F-2033258852" anchor-label="radioEmpty" id="74295457%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="radio-empty.html"><span>radio</span><wbr><span><span>Empty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="74295457%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="radio-empty.html"><span class="token function">radioEmpty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#ded8ce"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the unselected radio icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="84102967%2FFunctions%2F-2033258852" anchor-label="radioSelected" id="84102967%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="radio-selected.html"><span>radio</span><wbr><span><span>Selected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="84102967%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="radio-selected.html"><span class="token function">radioSelected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the selected radio icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="274108085%2FFunctions%2F-2033258852" anchor-label="receipt" id="274108085%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receipt.html"><span><span>receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="274108085%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="receipt.html"><span class="token function">receipt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#c94305"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the receipt icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-102567519%2FFunctions%2F-2033258852" anchor-label="sales" id="-102567519%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sales.html"><span><span>sales</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-102567519%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="sales.html"><span class="token function">sales</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#30343b"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the sales (bar chart) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="836047179%2FFunctions%2F-2033258852" anchor-label="search" id="836047179%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="search.html"><span><span>search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836047179%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="search.html"><span class="token function">search</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#8a8c91"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the search (magnifying glass) icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1337885165%2FFunctions%2F-2033258852" anchor-label="shoppingBag" id="1337885165%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="shopping-bag.html"><span>shopping</span><wbr><span><span>Bag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1337885165%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="shopping-bag.html"><span class="token function">shoppingBag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">17</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"white"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the shopping-bag icon with a descriptive accessibility role.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-874048267%2FFunctions%2F-2033258852" anchor-label="trash" id="-874048267%2FFunctions%2F-2033258852" data-filterable-set=":lib-ui/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":lib-ui/main" data-filterable-set=":lib-ui/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trash.html"><span><span>trash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-874048267%2FFunctions%2F-2033258852"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib-ui/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="trash.html"><span class="token function">trash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"#d04a12"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="javafx.scene/Node///PointingToDeclaration/">Node</span></div><div class="brief "><p class="paragraph">Creates the trash/remove icon.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
